@@ -11,13 +11,9 @@
  */
 namespace Kovey\Socket\App\Router;
 
-use Google\Protobuf\Internal\Message;
-
 class Routers implements RoutersInterface
 {
     private Array $routers;
-
-    private Message $base;
 
     public function __construct()
     {
@@ -33,10 +29,5 @@ class Routers implements RoutersInterface
     public function getRouter(string | int $code) : ?RouterInterface
     {
         return $this->routers[$code] ?? null;
-    }
-
-    public function getBase() : Message
-    {
-        return $this->base;
     }
 }
