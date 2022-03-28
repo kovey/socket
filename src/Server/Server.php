@@ -89,15 +89,20 @@ class Server implements ServerInterface
      */
     public function send(PacketInterface $packet, int $action, int $fd) : bool
     {
-        if (!$this->serv->exist($fd)) {
+        if (!$this->server->exist($fd)) {
             throw new CloseConnectionException('connect is not exist');
         }
 
-        return $this->serv->send($packet, $action, $fd);
+        return $this->server->send($packet, $action, $fd);
     }
 
     public function close(int $fd) : bool
     {
-        return $this->serv->close($fd);
+        return $this->server->close($fd);
+    }
+
+    public function start() : void
+    {
+        $this->server->start();
     }
 }
