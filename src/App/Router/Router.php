@@ -15,16 +15,13 @@ class Router implements RouterInterface
 {
     private string $protobuf;
 
-    private string $protobufBase;
-
     private string $handler;
 
     private string $method;
 
-    public function __construct(string $protobuf, string $router, string $protobufBase)
+    public function __construct(string $protobuf, string $router)
     {
         $this->protobuf = $protobuf;
-        $this->protobufBase = $protobufBase;
         $info = explode('@', $router);
         $this->handler = $info[1];
         $this->method = $info[0];
@@ -33,11 +30,6 @@ class Router implements RouterInterface
     public function getProtobuf() : string
     {
         return $this->protobuf;
-    }
-
-    public function getProtobufBase() : string
-    {
-        return $this->protobufBase;
     }
 
     public function getHandler() : string

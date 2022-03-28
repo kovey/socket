@@ -15,8 +15,6 @@ interface RouterInterface
 {
     public function getProtobuf() : string;
 
-    public function getProtobufBase() : string;
-
     public function getHandler() : string;
 
     public function getMethod() : string;

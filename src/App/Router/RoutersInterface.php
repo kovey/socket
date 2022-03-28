@@ -11,9 +11,13 @@
  */
 namespace Kovey\Socket\App\Router;
 
+use Google\Protobuf\Internal\Message;
+
 interface RoutersInterface
 {
     public function addRouter(int | string $code, RouterInterface $router) : RoutersInterface;
 
     public function getRouter(int | string $code) : ?RouterInterface;
+
+    public function getBase() : Message;
 }

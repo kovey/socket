@@ -30,7 +30,7 @@ class RouterInit
         $handler = $app->getConfig()['tcp']['handler'];
         $app->getContainer()
             ->on('Protocol', function (Event\Protocol $event) use ($app) {
-                $router = new Router($event->getProtobuf(), $event->getRouter(), $event->getProtobufBase());
+                $router = new Router($event->getProtobuf(), $event->getRouter());
                 $app->registerRouter($event->getCode(), $router);
             })
             ->parse(APPLICATION_PATH . '/application/' .$handler, $handler);
