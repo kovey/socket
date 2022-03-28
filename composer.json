@@ -1,0 +1,39 @@
+{
+    "name": "kovey/socket-server",
+    "type": "library",
+    "description": "Socket Server Of The Kovey Framework",
+    "keywords": [
+        "framework",
+        "kovey",
+        "socket",
+        "php"
+    ],
+    "license": "Apache-2.0",
+    "authors": [
+        {
+            "name": "Kovey",
+            "email": "kovey@vip.qq.com",
+            "role": "developer"
+        }
+    ],
+    "require": {
+        "php": "^8.0",
+        "ext-swoole": "^4.6.0",
+        "kovey/library": "^2.1",
+        "kovey/connection": "^1.1",
+        "ext-protobuf": "^3.13.0",
+        "kovey/logger": "^2.0",
+        "kovey/event": "^1.0",
+        "kovey/process": "^1.0",
+        "kovey/app": "^2.0",
+        "kovey/network": "dev-master"
+    },
+    "autoload": {
+        "psr-4": {
+            "Kovey\\Socket\\": "src/"
+        }
+    },
+    "require-dev": {
+        "phpstan/phpstan": "^1.2"
+    }
+}

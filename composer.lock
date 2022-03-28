@@ -1,0 +1,779 @@
+{
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
+        "This file is @generated automatically"
+    ],
+    "content-hash": "c179f67f20faaebbb69b3390611bf084",
+    "packages": [
+        {
+            "name": "kovey/app",
+            "version": "v2.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/kovey/app.git",
+                "reference": "ffa9d927b15763a776d7285ef7a5ab53d9ccf2a5"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/kovey/app/zipball/ffa9d927b15763a776d7285ef7a5ab53d9ccf2a5",
+                "reference": "ffa9d927b15763a776d7285ef7a5ab53d9ccf2a5",
+                "shasum": ""
+            },
+            "require": {
+                "kovey/connection": "^1.1.1",
+                "kovey/container": "^2.0",
+                "kovey/event": "^1.0.2",
+                "kovey/process": "^1.0",
+                "kovey/sharding": "^1.0",
+                "php": "^8.0"
+            },
+            "require-dev": {
+                "phpstan/phpstan": "^1.2",
+                "phpunit/phpunit": "^9.3"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Kovey\\App\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "Apache-2.0"
+            ],
+            "authors": [
+                {
+                    "name": "Kovey",
+                    "email": "kovey@vip.qq.com",
+                    "role": "developer"
+                }
+            ],
+            "description": "Container Of The Kovey Framework",
+            "keywords": [
+                "app",
+                "framework",
+                "kovey",
+                "php"
+            ],
+            "support": {
+                "issues": "https://github.com/kovey/app/issues",
+                "source": "https://github.com/kovey/app/tree/v2.1.0"
+            },
+            "time": "2021-11-25T12:11:05+00:00"
+        },
+        {
+            "name": "kovey/connection",
+            "version": "v1.2.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/kovey/connection.git",
+                "reference": "3fffd14b33d5562a66776088d83eac083878138e"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/kovey/connection/zipball/3fffd14b33d5562a66776088d83eac083878138e",
+                "reference": "3fffd14b33d5562a66776088d83eac083878138e",
+                "shasum": ""
+            },
+            "require": {
+                "kovey/db": "^1.1",
+                "kovey/redis": "^1.0",
+                "php": "^8.0"
+            },
+            "require-dev": {
+                "phpstan/phpstan": "^1.2",
+                "phpunit/phpunit": "^9.3"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Kovey\\Connection\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "Apache-2.0"
+            ],
+            "authors": [
+                {
+                    "name": "Kovey",
+                    "email": "kovey@vip.qq.com",
+                    "role": "developer"
+                }
+            ],
+            "description": "Connection Pool Of The Kovey Framework",
+            "keywords": [
+                "Connection",
+                "framework",
+                "kovey",
+                "php",
+                "pool"
+            ],
+            "support": {
+                "issues": "https://github.com/kovey/connection/issues",
+                "source": "https://github.com/kovey/connection/tree/v1.2.0"
+            },
+            "time": "2021-11-25T11:45:30+00:00"
+        },
+        {
+            "name": "kovey/container",
+            "version": "v2.1.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/kovey/container.git",
+                "reference": "d21c1f41023639f3c29da6c5894dde39c9c10bdb"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/kovey/container/zipball/d21c1f41023639f3c29da6c5894dde39c9c10bdb",
+                "reference": "d21c1f41023639f3c29da6c5894dde39c9c10bdb",
+                "shasum": ""
+            },
+            "require": {
+                "kovey/event": "^1.0",
+                "kovey/library": "^2.0",
+                "kovey/validator": "^1.0",
+                "php": "^8.0"
+            },
+            "require-dev": {
+                "phpstan/phpstan": "^1.2",
+                "phpunit/phpunit": "^9.3"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Kovey\\Container\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "Apache-2.0"
+            ],
+            "authors": [
+                {
+                    "name": "Kovey",
+                    "email": "kovey@vip.qq.com",
+                    "role": "developer"
+                }
+            ],
+            "description": "Container Of The Kovey Framework",
+            "keywords": [
+                "container",
+                "framework",
+                "kovey",
+                "php"
+            ],
+            "support": {
+                "issues": "https://github.com/kovey/container/issues",
+                "source": "https://github.com/kovey/container/tree/v2.1.1"
+            },
+            "time": "2022-02-24T02:27:15+00:00"
+        },
+        {
+            "name": "kovey/db",
+            "version": "v1.1.7",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/kovey/db.git",
+                "reference": "0a53a59486f6865d2956b50c63de93a80bbb2e53"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/kovey/db/zipball/0a53a59486f6865d2956b50c63de93a80bbb2e53",
+                "reference": "0a53a59486f6865d2956b50c63de93a80bbb2e53",
+                "shasum": ""
+            },
+            "require": {
+                "kovey/library": "^2.0",
+                "kovey/logger": "^1.0 | ^2.0",
+                "php": "^8.0"
+            },
+            "require-dev": {
+                "phpstan/phpstan": "^1.2",
+                "phpunit/phpunit": "^9.3"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Kovey\\Db\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "Apache-2.0"
+            ],
+            "authors": [
+                {
+                    "name": "Kovey",
+                    "email": "kovey@vip.qq.com",
+                    "role": "developer"
+                }
+            ],
+            "description": "Database Of The Kovey Framework",
+            "keywords": [
+                "db",
+                "framework",
+                "kovey",
+                "php"
+            ],
+            "support": {
+                "issues": "https://github.com/kovey/db/issues",
+                "source": "https://github.com/kovey/db/tree/v1.1.7"
+            },
+            "time": "2021-11-25T11:34:23+00:00"
+        },
+        {
+            "name": "kovey/event",
+            "version": "v1.0.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/kovey/event.git",
+                "reference": "7c2b47c70335ca07053b96ce74da35f9a1775773"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/kovey/event/zipball/7c2b47c70335ca07053b96ce74da35f9a1775773",
+                "reference": "7c2b47c70335ca07053b96ce74da35f9a1775773",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^8.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^9.3"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Kovey\\Event\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "Apache-2.0"
+            ],
+            "authors": [
+                {
+                    "name": "Kovey",
+                    "email": "kovey@vip.qq.com",
+                    "role": "developer"
+                }
+            ],
+            "description": "Event Of The Kovey Framework",
+            "keywords": [
+                "event",
+                "framework",
+                "kovey",
+                "php"
+            ],
+            "support": {
+                "issues": "https://github.com/kovey/event/issues",
+                "source": "https://github.com/kovey/event/tree/v1.0.3"
+            },
+            "time": "2021-03-18T10:36:27+00:00"
+        },
+        {
+            "name": "kovey/library",
+            "version": "v2.1.9",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/kovey/library.git",
+                "reference": "ba1e33bf6d75ae9ae029ac06a601e496cc271e72"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/kovey/library/zipball/ba1e33bf6d75ae9ae029ac06a601e496cc271e72",
+                "reference": "ba1e33bf6d75ae9ae029ac06a601e496cc271e72",
+                "shasum": ""
+            },
+            "require": {
+                "ext-swoole": "^4.6.0",
+                "php": "^8.0"
+            },
+            "require-dev": {
+                "phpstan/phpstan": "^1.2",
+                "phpunit/phpunit": "^9.3"
+            },
+            "type": "library",
+            "autoload": {
+                "files": [
+                    "src/kovey.php"
+                ],
+                "psr-4": {
+                    "Kovey\\Library\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "Apache-2.0"
+            ],
+            "authors": [
+                {
+                    "name": "Kovey",
+                    "email": "kovey@vip.qq.com",
+                    "role": "developer"
+                }
+            ],
+            "description": "Library Of The Kovey Framework",
+            "keywords": [
+                "framework",
+                "kovey",
+                "lib",
+                "php"
+            ],
+            "support": {
+                "issues": "https://github.com/kovey/library/issues",
+                "source": "https://github.com/kovey/library/tree/v2.1.9"
+            },
+            "time": "2021-11-25T07:21:27+00:00"
+        },
+        {
+            "name": "kovey/logger",
+            "version": "v2.0.6",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/kovey/logger.git",
+                "reference": "8ba53250fd6e38fba3cf11a2387e3b73bf463fb3"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/kovey/logger/zipball/8ba53250fd6e38fba3cf11a2387e3b73bf463fb3",
+                "reference": "8ba53250fd6e38fba3cf11a2387e3b73bf463fb3",
+                "shasum": ""
+            },
+            "require": {
+                "ext-swoole": "^4.6.0",
+                "php": "^8.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^9.3"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Kovey\\Logger\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "Apache-2.0"
+            ],
+            "authors": [
+                {
+                    "name": "Kovey",
+                    "email": "kovey@vip.qq.com",
+                    "role": "developer"
+                }
+            ],
+            "description": "Logger Of The Kovey Framework",
+            "keywords": [
+                "framework",
+                "kovey",
+                "logger",
+                "php"
+            ],
+            "support": {
+                "issues": "https://github.com/kovey/logger/issues",
+                "source": "https://github.com/kovey/logger/tree/v2.0.6"
+            },
+            "time": "2021-07-21T12:21:17+00:00"
+        },
+        {
+            "name": "kovey/network",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/kovey/network.git",
+                "reference": "2767258a205551f77d3c2c743c30c26f0ce2fa7f"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/kovey/network/zipball/2767258a205551f77d3c2c743c30c26f0ce2fa7f",
+                "reference": "2767258a205551f77d3c2c743c30c26f0ce2fa7f",
+                "shasum": ""
+            },
+            "require": {
+                "ext-swoole": "^4.6.0",
+                "php": "^8.0"
+            },
+            "require-dev": {
+                "phpstan/phpstan": "^1.2"
+            },
+            "default-branch": true,
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Kovey\\Network\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "Apache-2.0"
+            ],
+            "authors": [
+                {
+                    "name": "Kovey",
+                    "email": "kovey@vip.qq.com",
+                    "role": "developer"
+                }
+            ],
+            "description": "Network Of The Kovey Framework",
+            "keywords": [
+                "Socket",
+                "framework",
+                "kovey",
+                "network",
+                "php",
+                "websocket"
+            ],
+            "support": {
+                "issues": "https://github.com/kovey/network/issues",
+                "source": "https://github.com/kovey/network/tree/master"
+            },
+            "time": "2022-03-28T09:33:53+00:00"
+        },
+        {
+            "name": "kovey/process",
+            "version": "v1.0.4",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/kovey/process.git",
+                "reference": "990eb6de695e2e9cb6905deee310f62b900771d4"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/kovey/process/zipball/990eb6de695e2e9cb6905deee310f62b900771d4",
+                "reference": "990eb6de695e2e9cb6905deee310f62b900771d4",
+                "shasum": ""
+            },
+            "require": {
+                "ext-swoole": "^4.6.0",
+                "kovey/library": "^2.1",
+                "kovey/rpc-client": "^2.0",
+                "php": "^8.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^9.3"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Kovey\\Process\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "Apache-2.0"
+            ],
+            "authors": [
+                {
+                    "name": "Kovey",
+                    "email": "kovey@vip.qq.com",
+                    "role": "developer"
+                }
+            ],
+            "description": "Process Of The Kovey Framework",
+            "keywords": [
+                "framework",
+                "kovey",
+                "php",
+                "process"
+            ],
+            "support": {
+                "issues": "https://github.com/kovey/process/issues",
+                "source": "https://github.com/kovey/process/tree/v1.0.4"
+            },
+            "time": "2022-03-24T07:40:03+00:00"
+        },
+        {
+            "name": "kovey/redis",
+            "version": "v1.0.4",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/kovey/redis.git",
+                "reference": "438f34266af3f8e938c0e568d15c6c1149eba168"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/kovey/redis/zipball/438f34266af3f8e938c0e568d15c6c1149eba168",
+                "reference": "438f34266af3f8e938c0e568d15c6c1149eba168",
+                "shasum": ""
+            },
+            "require": {
+                "ext-redis": ">=5.3",
+                "kovey/library": " ^2.0",
+                "kovey/logger": "^1.0 | ^2.0",
+                "php": ">=8.0"
+            },
+            "require-dev": {
+                "ext-swoole": ">=4.5.5",
+                "phpstan/phpstan": "^1.2",
+                "phpunit/phpunit": "^9.3"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Kovey\\Redis\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "Apache-2.0"
+            ],
+            "authors": [
+                {
+                    "name": "Kovey",
+                    "email": "kovey@vip.qq.com",
+                    "role": "developer"
+                }
+            ],
+            "description": "Redis Of The Kovey Framework",
+            "keywords": [
+                "framework",
+                "kovey",
+                "php",
+                "redis"
+            ],
+            "support": {
+                "issues": "https://github.com/kovey/redis/issues",
+                "source": "https://github.com/kovey/redis/tree/v1.0.4"
+            },
+            "time": "2021-11-30T04:23:07+00:00"
+        },
+        {
+            "name": "kovey/rpc-client",
+            "version": "v2.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/kovey/rpc-client.git",
+                "reference": "10f1e484617c3e9ac7362a162fbef214b2009ab7"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/kovey/rpc-client/zipball/10f1e484617c3e9ac7362a162fbef214b2009ab7",
+                "reference": "10f1e484617c3e9ac7362a162fbef214b2009ab7",
+                "shasum": ""
+            },
+            "require": {
+                "ext-swoole": "^4.6.0",
+                "kovey/event": "^1.0",
+                "kovey/library": "^2.0",
+                "php": "^8.0"
+            },
+            "require-dev": {
+                "phpstan/phpstan": "^1.2",
+                "phpunit/phpunit": "^9.3"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Kovey\\Rpc\\Client\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "Apache-2.0"
+            ],
+            "authors": [
+                {
+                    "name": "Kovey",
+                    "email": "kovey@vip.qq.com",
+                    "role": "developer"
+                }
+            ],
+            "description": "Rpc Client Of The Kovey Framework",
+            "keywords": [
+                "client",
+                "framework",
+                "kovey",
+                "php",
+                "rpc"
+            ],
+            "support": {
+                "issues": "https://github.com/kovey/rpc-client/issues",
+                "source": "https://github.com/kovey/rpc-client/tree/v2.1.0"
+            },
+            "time": "2021-11-25T12:15:23+00:00"
+        },
+        {
+            "name": "kovey/sharding",
+            "version": "v1.1.5",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/kovey/sharding.git",
+                "reference": "40cbfcc45aaa34417dd159572adbc179c06892a2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/kovey/sharding/zipball/40cbfcc45aaa34417dd159572adbc179c06892a2",
+                "reference": "40cbfcc45aaa34417dd159572adbc179c06892a2",
+                "shasum": ""
+            },
+            "require": {
+                "kovey/connection": "^1.1",
+                "kovey/library": "^2.0",
+                "php": "^8.0"
+            },
+            "require-dev": {
+                "phpstan/phpstan": "^1.2",
+                "phpunit/phpunit": "^9.3"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Kovey\\Sharding\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "Apache-2.0"
+            ],
+            "authors": [
+                {
+                    "name": "Kovey",
+                    "email": "kovey@vip.qq.com",
+                    "role": "developer"
+                }
+            ],
+            "description": "Sharding Database Of The Kovey Framework",
+            "keywords": [
+                "database",
+                "framework",
+                "kovey",
+                "php",
+                "sharding"
+            ],
+            "support": {
+                "issues": "https://github.com/kovey/sharding/issues",
+                "source": "https://github.com/kovey/sharding/tree/v1.1.5"
+            },
+            "time": "2021-11-25T11:49:32+00:00"
+        },
+        {
+            "name": "kovey/validator",
+            "version": "v1.0.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/kovey/validator.git",
+                "reference": "f90f08270633700cbff1bc3df8bf11df989c43da"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/kovey/validator/zipball/f90f08270633700cbff1bc3df8bf11df989c43da",
+                "reference": "f90f08270633700cbff1bc3df8bf11df989c43da",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^8.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^9.3"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Kovey\\Validator\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "Apache-2.0"
+            ],
+            "authors": [
+                {
+                    "name": "Kovey",
+                    "email": "kovey@vip.qq.com",
+                    "role": "developer"
+                }
+            ],
+            "description": "Validator Of The Kovey Framework",
+            "keywords": [
+                "framework",
+                "kovey",
+                "php",
+                "validator"
+            ],
+            "support": {
+                "issues": "https://github.com/kovey/validator/issues",
+                "source": "https://github.com/kovey/validator/tree/v1.0.2"
+            },
+            "time": "2021-01-29T10:21:37+00:00"
+        }
+    ],
+    "packages-dev": [
+        {
+            "name": "phpstan/phpstan",
+            "version": "1.5.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/phpstan/phpstan.git",
+                "reference": "2be8dd6dfa09ab1a21c49956ff591979cd5ab29e"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/phpstan/phpstan/zipball/2be8dd6dfa09ab1a21c49956ff591979cd5ab29e",
+                "reference": "2be8dd6dfa09ab1a21c49956ff591979cd5ab29e",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^7.2|^8.0"
+            },
+            "conflict": {
+                "phpstan/phpstan-shim": "*"
+            },
+            "bin": [
+                "phpstan",
+                "phpstan.phar"
+            ],
+            "type": "library",
+            "autoload": {
+                "files": [
+                    "bootstrap.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "PHPStan - PHP Static Analysis Tool",
+            "support": {
+                "issues": "https://github.com/phpstan/phpstan/issues",
+                "source": "https://github.com/phpstan/phpstan/tree/1.5.0"
+            },
+            "funding": [
+                {
+                    "url": "https://github.com/ondrejmirtes",
+                    "type": "github"
+                },
+                {
+                    "url": "https://github.com/phpstan",
+                    "type": "github"
+                },
+                {
+                    "url": "https://www.patreon.com/phpstan",
+                    "type": "patreon"
+                },
+                {
+                    "url": "https://tidelift.com/funding/github/packagist/phpstan/phpstan",
+                    "type": "tidelift"
+                }
+            ],
+            "time": "2022-03-24T18:18:00+00:00"
+        }
+    ],
+    "aliases": [],
+    "minimum-stability": "stable",
+    "stability-flags": {
+        "kovey/network": 20
+    },
+    "prefer-stable": false,
+    "prefer-lowest": false,
+    "platform": {
+        "php": "^8.0",
+        "ext-swoole": "^4.6.0",
+        "ext-protobuf": "^3.13.0"
+    },
+    "platform-dev": [],
+    "plugin-api-version": "2.2.0"
+}
