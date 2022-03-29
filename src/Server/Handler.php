@@ -25,9 +25,12 @@ class Handler implements ReceiveInterface
 
     private Work $work;
 
-    public function __construct(bool $openMonitor)
+    private string $name;
+
+    public function __construct(bool $openMonitor, string $name)
     {
         $this->openMonitor = $openMonitor;
+        $this->name = $name;
     }
 
     public function setWork(Work $work) : self
@@ -45,7 +48,7 @@ class Handler implements ReceiveInterface
     {
         $packet = $this->pack->unpack($event->getData());
 
-        $receive = new Receive($event, $this->config['name'], $packet);
+        $receive = new Receive($event, $this->name, $packet);
         $receive->begin()
                  ->run($this->work)
                  ->end($this->pack);

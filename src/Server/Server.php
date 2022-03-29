@@ -33,7 +33,7 @@ class Server implements ServerInterface
         $this->config = $config;
         $this->initLog();
         $this->server = NS::factory($this->config['socket_type'], $this->config);
-        $this->handler = new Handler(($this->config['monitor_open'] ?? 'On') == 'On');
+        $this->handler = new Handler(($this->config['monitor_open'] ?? 'On') == 'On', $this->config['name']);
         $this->server->setReceive($this->handler);
     }
 
