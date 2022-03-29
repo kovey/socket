@@ -12,7 +12,7 @@
 namespace Kovey\Socket\Server;
 
 use Kovey\Network\Handler\ReceiveInterface;
-use Kovey\Network\Event\Receive;
+use Kovey\Network\Event\Receive as ER;
 use Kovey\Socket\Protobuf\ProtobufInterface;
 use Kovey\Socket\Handler\PackInterface;
 use Kovey\App\Components\Work;
@@ -44,7 +44,7 @@ class Handler implements ReceiveInterface
         $this->pack = $pack;
     }
 
-    public function receive(Receive $event) : void
+    public function receive(ER $event) : void
     {
         $packet = $this->pack->unpack($event->getData());
 
