@@ -20,6 +20,7 @@ use Kovey\Socket\App\Router\RoutersInterface;
 use Kovey\Library\Exception\KoveyException;
 use Kovey\Socket\App\Bootstrap;
 use Kovey\Network\Handler as NH;
+use Kovey\Socket\Handler\PackInterface;
 
 class App extends AA
 {
