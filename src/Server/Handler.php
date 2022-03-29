@@ -43,7 +43,7 @@ class Handler implements ReceiveInterface
 
     public function receive(Receive $event) : void
     {
-        $packet = $this->pack->unpack($event->getPacket());
+        $packet = $this->pack->unpack($event->getData());
 
         $receive = new Receive($event, $this->config['name'], $packet);
         $receive->begin()

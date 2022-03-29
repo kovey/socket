@@ -138,7 +138,7 @@ class Receive
             'method' => $this->result['method'] ?? '',
             'service' => $this->service,
             'service_type' => 'tcp',
-            'packet' => base64_encode($this->event->getPacket()),
+            'packet' => base64_encode($this->event->getData()),
             'type' => $this->type,
             'params' => $this->result['params'] ?? '',
             'response' => $this->result['message'] ?? '',
