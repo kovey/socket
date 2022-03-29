@@ -9,7 +9,7 @@
  * @time 2021-01-08 10:02:48
  *
  */
-namespace Kovey\Tcp\Event;
+namespace Kovey\Socket\Event;
 
 use Kovey\Event\EventInterface;
 use Kovey\Socket\Protocol\ProtocolInterface;
