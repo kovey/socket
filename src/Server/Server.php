@@ -31,10 +31,10 @@ class Server implements ServerInterface
     public function __construct(Array $config)
     {
         $this->config = $config;
+        $this->initLog();
         $this->server = NS::factory($this->config['socket_type'], $this->config);
         $this->handler = new Handler(($this->config['monitor_open'] ?? 'On') == 'On');
         $this->server->setReceive($this->handler);
-        $this->initLog();
     }
 
     private function initLog()
@@ -45,7 +45,7 @@ class Server implements ServerInterface
         }
 
         if (!is_dir($this->config['logger_dir'] . '/server')) {
-            mkdir($this->config['logger_dir'] . '/server');
+            mkdir($this->config['logger_dir'] . '/server', 0777, true);
         }
     }
 
