@@ -23,6 +23,7 @@ use Google\Protobuf\Internal\Message;
 use Kovey\Network\AdapterInterface;
 use Kovey\App\Components\Work;
 use Kovey\Socket\Handler\PackInterface;
+use Kovey\Socket\Event\Handler as EH;
 
 class Receive
 {
@@ -82,7 +83,7 @@ class Receive
     {
         try {
             $this->action = $this->packet->getAction();
-            $this->result = $work->run(new Event\Handler($this->packet, $this->fd, $this->ip, $this->traceId, $this->spanId));
+            $this->result = $work->run(new EH($this->packet, $this->fd, $this->ip, $this->traceId, $this->spanId));
         } catch (CloseConnectionException $e) {
             $this->event->getServer()->close($this->fd);
             $this->type = 'connection_close_exception';
