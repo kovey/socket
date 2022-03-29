@@ -34,6 +34,19 @@ class Server implements ServerInterface
         $this->server = NS::factory($this->config['socket_type'], $this->config);
         $this->handler = new Handler(($this->config['monitor_open'] ?? 'On') == 'On');
         $this->server->setReceive($this->handler);
+        $this->initLog();
+    }
+
+    private function initLog()
+    {
+        $logDir = dirname($this->config['pid_file']);
+        if (!is_dir($logDir)) {
+            mkdir($logDir, 0777, true);
+        }
+
+        if (!is_dir($this->config['logger_dir'] . '/server')) {
+            mkdir($this->config['logger_dir'] . '/server');
+        }
     }
 
     public function setWork(Work $work) : self
