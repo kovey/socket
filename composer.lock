@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "c179f67f20faaebbb69b3390611bf084",
+    "content-hash": "1057cdb64490a58a1ca8288e7f68b271",
     "packages": [
         {
             "name": "kovey/app",
@@ -381,16 +381,16 @@
         },
         {
             "name": "kovey/network",
-            "version": "dev-master",
+            "version": "v1.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/kovey/network.git",
-                "reference": "2767258a205551f77d3c2c743c30c26f0ce2fa7f"
+                "reference": "974475b7f7014dd3df42928dd590075be1efd633"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/kovey/network/zipball/2767258a205551f77d3c2c743c30c26f0ce2fa7f",
-                "reference": "2767258a205551f77d3c2c743c30c26f0ce2fa7f",
+                "url": "https://api.github.com/repos/kovey/network/zipball/974475b7f7014dd3df42928dd590075be1efd633",
+                "reference": "974475b7f7014dd3df42928dd590075be1efd633",
                 "shasum": ""
             },
             "require": {
@@ -400,7 +400,6 @@
             "require-dev": {
                 "phpstan/phpstan": "^1.2"
             },
-            "default-branch": true,
             "type": "library",
             "autoload": {
                 "psr-4": {
@@ -429,9 +428,9 @@
             ],
             "support": {
                 "issues": "https://github.com/kovey/network/issues",
-                "source": "https://github.com/kovey/network/tree/master"
+                "source": "https://github.com/kovey/network/tree/v1.0.0"
             },
-            "time": "2022-03-28T09:33:53+00:00"
+            "time": "2022-03-29T03:34:41+00:00"
         },
         {
             "name": "kovey/process",
@@ -543,16 +542,16 @@
         },
         {
             "name": "kovey/rpc-client",
-            "version": "v2.1.0",
+            "version": "v2.1.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/kovey/rpc-client.git",
-                "reference": "10f1e484617c3e9ac7362a162fbef214b2009ab7"
+                "reference": "e84035469f63be03936bfb4d35fa155c1de3e792"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/kovey/rpc-client/zipball/10f1e484617c3e9ac7362a162fbef214b2009ab7",
-                "reference": "10f1e484617c3e9ac7362a162fbef214b2009ab7",
+                "url": "https://api.github.com/repos/kovey/rpc-client/zipball/e84035469f63be03936bfb4d35fa155c1de3e792",
+                "reference": "e84035469f63be03936bfb4d35fa155c1de3e792",
                 "shasum": ""
             },
             "require": {
@@ -592,9 +591,9 @@
             ],
             "support": {
                 "issues": "https://github.com/kovey/rpc-client/issues",
-                "source": "https://github.com/kovey/rpc-client/tree/v2.1.0"
+                "source": "https://github.com/kovey/rpc-client/tree/v2.1.1"
             },
-            "time": "2021-11-25T12:15:23+00:00"
+            "time": "2022-03-29T05:51:00+00:00"
         },
         {
             "name": "kovey/sharding",
@@ -704,16 +703,16 @@
     "packages-dev": [
         {
             "name": "phpstan/phpstan",
-            "version": "1.5.0",
+            "version": "1.5.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpstan/phpstan.git",
-                "reference": "2be8dd6dfa09ab1a21c49956ff591979cd5ab29e"
+                "reference": "f32e95f571c9587b4e14be05253ae56fedd00b2c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpstan/phpstan/zipball/2be8dd6dfa09ab1a21c49956ff591979cd5ab29e",
-                "reference": "2be8dd6dfa09ab1a21c49956ff591979cd5ab29e",
+                "url": "https://api.github.com/repos/phpstan/phpstan/zipball/f32e95f571c9587b4e14be05253ae56fedd00b2c",
+                "reference": "f32e95f571c9587b4e14be05253ae56fedd00b2c",
                 "shasum": ""
             },
             "require": {
@@ -739,7 +738,7 @@
             "description": "PHPStan - PHP Static Analysis Tool",
             "support": {
                 "issues": "https://github.com/phpstan/phpstan/issues",
-                "source": "https://github.com/phpstan/phpstan/tree/1.5.0"
+                "source": "https://github.com/phpstan/phpstan/tree/1.5.2"
             },
             "funding": [
                 {
@@ -759,14 +758,12 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2022-03-24T18:18:00+00:00"
+            "time": "2022-03-29T07:34:36+00:00"
         }
     ],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": {
-        "kovey/network": 20
-    },
+    "stability-flags": [],
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {
