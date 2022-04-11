@@ -105,7 +105,7 @@ class Server implements ServerInterface
             throw new CloseConnectionException('connect is not exist');
         }
 
-        return $this->server->send($this->handler->getPack()->pack($pack, $action), $fd);
+        return $this->server->send($this->handler->getPack()->pack($packet, $action), $fd);
     }
 
     public function close(int $fd) : bool
