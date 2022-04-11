@@ -58,4 +58,9 @@ class Handler implements ReceiveInterface
 
         $receive->monitor();
     }
+
+    public function getPack() : PackInterface
+    {
+        return $this->pack;
+    }
 }

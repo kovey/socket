@@ -14,7 +14,6 @@ namespace Kovey\Socket\Server;
 use Kovey\Socket\Protocol\ProtocolInterface;
 use Kovey\Library\Exception\CloseConnectionException;
 use Kovey\Network\Server as NS;
-use Kovey\Network\PacketInterface;
 use Kovey\Network\AdapterInterface;
 use Kovey\App\Components\Work;
 use Kovey\App\Components\ServerInterface;
@@ -100,13 +99,13 @@ class Server implements ServerInterface
      *
      * @return bool
      */
-    public function send(PacketInterface $packet, int $action, int $fd) : bool
+    public function send(mixed $packet, int $action, int $fd) : bool
     {
         if (!$this->server->exist($fd)) {
             throw new CloseConnectionException('connect is not exist');
         }
 
-        return $this->server->send($packet, $action, $fd);
+        return $this->server->send($this->handler->getPack()->pack($pack, $action), $fd);
     }
 
     public function close(int $fd) : bool
