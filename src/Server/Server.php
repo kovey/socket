@@ -12,12 +12,12 @@
 namespace Kovey\Socket\Server;
 
 use Kovey\Socket\Protocol\ProtocolInterface;
-use Kovey\Library\Exception\CloseConnectionException;
 use Kovey\Network\Server as NS;
 use Kovey\Network\AdapterInterface;
 use Kovey\App\Components\Work;
 use Kovey\App\Components\ServerInterface;
 use Kovey\Socket\Handler\PackInterface;
+use Kovey\Socket\Handler\CheckSpeedInterface;
 
 class Server implements ServerInterface
 {
@@ -51,6 +51,12 @@ class Server implements ServerInterface
     public function setWork(Work $work) : self
     {
         $this->handler->setWork($work);
+        return $this;
+    }
+
+    public function setCheckSpeed(CheckSpeedInterface $speed) : self
+    {
+        $this->handler->setCheckSpeed($speed);
         return $this;
     }
 
@@ -102,7 +108,7 @@ class Server implements ServerInterface
     public function send(mixed $packet, int $action, int $fd) : bool
     {
         if (!$this->server->exist($fd)) {
-            throw new CloseConnectionException('connect is not exist');
+            return false;
         }
 
         return $this->server->send($this->handler->getPack()->pack($packet, $action), $fd);

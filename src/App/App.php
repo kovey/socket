@@ -21,6 +21,7 @@ use Kovey\Library\Exception\KoveyException;
 use Kovey\Socket\App\Bootstrap;
 use Kovey\Network\Handler as NH;
 use Kovey\Socket\Handler\PackInterface;
+use Kovey\Socket\Handler\CheckSpeedInterface;
 
 class App extends AA
 {
@@ -96,6 +97,12 @@ class App extends AA
     public function registerPack(PackInterface $pack) : App
     {
         $this->server->setPack($pack);
+        return $this;
+    }
+
+    public function registerCheckSpeed(CheckSpeedInterface $speed) : App
+    {
+        $this->server->setCheckSpeed($speed);
         return $this;
     }
 
