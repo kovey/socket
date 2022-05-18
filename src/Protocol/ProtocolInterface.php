@@ -27,7 +27,7 @@ interface ProtocolInterface
      *
      * @return int
      */
-    public function getAction() : int;
+    public function getAction() : int | string;
 
     public function getBase() : Message;
 }
