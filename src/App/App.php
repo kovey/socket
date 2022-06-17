@@ -65,6 +65,7 @@ class App extends AA
     protected function initWork() : App
     {
         $this->work = new Handler();
+        $this->work->setLocker($this->locker);
         return $this;
     }
 

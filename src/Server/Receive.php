@@ -47,7 +47,7 @@ class Receive
 
     private string $service;
 
-    private int $action;
+    private int | string $action;
 
     private string $type;
 
@@ -152,7 +152,7 @@ class Receive
             'from' => $this->service,
             'end' => $end * 10000,
             'trace' => $this->trace,
-            'err' => $this->err,
+            'err' => empty($this->result['error']) ? $this->err : $this->result['error'],
             'parentId' => 'root',
             'spanId' => $this->spanId,
             'fd' => $this->fd

@@ -52,6 +52,16 @@ class Handler extends Work
 
         $class = $router->getHandler();
         $keywords = $this->container->getKeywords($class, $router->getMethod());
+        $locker = $keywords[Fields::KEYWORD_LOCKER] ?? null;
+        if (!empty($locker)) {
+            if (!$this->locker->lock($event->getFd(), $locker->getKey(), $locker->getExpire())) {
+                return array(
+                    'class' => $router->getHandler(), 'method' => $router->getMethod(), 'params' => $protobuf->serializeToJsonString(), 
+                    'base' => empty($base) ? '' : $base->serializeToJsonString(), 'error' => 'method is locked'
+                );
+            }
+        }
+
         try {
             $instance = $this->container->get($class, $event->getTraceId(), $event->getSpanId(), $keywords['ext']);
             if (!$instance instanceof HandlerAbstract) {
@@ -100,6 +110,10 @@ class Handler extends Work
             ));
             throw $e;
         } finally {
+            if (!empty($locker)) {
+                $this->locker->unlock($event->getFd(), $locker->getKey());
+            }
+
             foreach ($keywords as $value) {
                 if (!$value instanceof ManualCollectInterface) {
                     continue;
